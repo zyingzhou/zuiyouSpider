@@ -175,7 +175,7 @@ def parser(items):
 
 # 视频弹幕解析
 def parser_danmu(danmu_data):
-    if len(danmu_data) is not None:
+    if danmu_data is not None:
         for i in range(len(danmu_data)):
             item = danmu_data[i]
             # 弹幕的评论者,已经失效
@@ -185,8 +185,6 @@ def parser_danmu(danmu_data):
             # 弹幕内容
             content = item["text"]
             print("{},用户ID{}: {}".format(i, userid, content))
-    else:
-        pass
 
 
 def main():
